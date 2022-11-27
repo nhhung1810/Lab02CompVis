@@ -427,8 +427,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98E9E99329334CF9002F257F /* Build configuration list for PBXNativeTarget "Lab02CompVis" */;
 			buildPhases = (
-				98E9E98829334CF9002F257F /* Sources */,
 				98E9E98929334CF9002F257F /* Frameworks */,
+				98E9E98829334CF9002F257F /* Sources */,
 				98E9E98A29334CF9002F257F /* CopyFiles */,
 				98E7EA262933564900A01982 /* Embed Libraries */,
 			);

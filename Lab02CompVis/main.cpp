@@ -29,7 +29,7 @@ Matrix readImage(std::string path){
 void showImage(cv::Mat image, string win_name){
     cv::namedWindow(win_name);
     imshow(win_name , image);
-    cv::waitKey(0);
+//    cv::waitKey(0);
     return;
 }
 
@@ -101,6 +101,7 @@ public:
         
         imshow(SRC_WINDOW, srcImg);
         renderHarrisCallback(0, 0);
+        cv::waitKey(0);
         
     }
     
@@ -109,6 +110,7 @@ public:
         count++;
         Matrix dstNormScaled = harrisCorner(srcImg);
         showImage(dstNormScaled, CORNER_WINDOW);
+//        dstNormScaled.release();
     }
     
 };
