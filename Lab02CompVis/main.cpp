@@ -16,11 +16,29 @@
 #include "HarrisCorner.h"
 #include "Utils.h"
 #include "Blob.h"
+#include "DoGDetector.h"
 
 typedef cv::Mat Matrix;
 typedef std::string string;
 
 static int runCamera();
+
+static void demoCornerHarris();
+
+static void demoDoGDetector();
+
+static void demoBlobDetector();
+
+
+
+int main(){
+    cv::Mat image = readImage("/Users/hung.nh/Downloads/ava.jpeg");
+    DoGDetector b = DoGDetector();
+    b.render(image);
+    //    demoCornerHarris();
+}
+
+
 
 static void demoCornerHarris() {
     std::cout << "Hello world!" << std::endl;
@@ -32,18 +50,17 @@ static void demoCornerHarris() {
     harrisDemo.render(image);
 }
 
-// Don't use namesapce
-//using namespace cv;
-//using namespace std:
+static void demoDoGDetector(){
+    cv::Mat image = readImage("/Users/hung.nh/Downloads/ava.jpeg");
+    DoGDetector b = DoGDetector();
+    b.render(image);
+}
 
-
-int main(){
+static void demoBlobDetector(){
     cv::Mat image = readImage("/Users/hung.nh/Downloads/ava.jpeg");
     BlobDetector b = BlobDetector();
     b.render(image);
-    //    demoCornerHarris();
 }
-
 
 static int runCamera() {
     Matrix myImage;//Declaring a matrix to load the frames//
